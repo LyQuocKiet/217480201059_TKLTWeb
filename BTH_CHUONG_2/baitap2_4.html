@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex04</title>
+    <style>
+        .h1 {
+            background-color: aqua;
+            text-align: left; /* Căn trái cho đoạn văn bản */
+            font-weight: bold;
+            padding: 10px 0; /* Thêm padding cho đoạn văn bản */
+            margin-bottom: 0; /* Loại bỏ khoảng cách dưới cùng */
+        }
+        hr {
+            margin-top: 0; /* Loại bỏ khoảng cách trên cùng */
+        }
+        h1 {
+            font-size: 20px; /* Thêm đơn vị px cho kích thước font */
+            font-family: Verdana;
+            font-weight: bold;
+            color: red;
+            text-align: center;
+        }
+        h3, h5 {
+            text-align: center;
+        }
+        #h4 {
+            text-align: center;
+        }
+        form {
+            margin: auto; /* Canh giữa form */
+            width: 50%; /* Đặt chiều rộng cho form */
+            text-align: left;
+        }
+        input[type="button"] {
+            margin-top: 10px; /* Khoảng cách giữa các nút */
+            /* display: block; Hiển thị nút trên một dòng riêng biệt */
+            margin-left: auto; /* Canh giữa nút */
+            margin-right: auto; /* Canh giữa nút */
+        }
+    </style>
+</head>
+<body>
+    <p class="h1"><b>Đăng kí dự thi</b></p>
+    <hr color="black" size="3">
+    <br>
+    <p>
+        <b>TRƯỜNG ĐẠI HỌC BẠC LIÊU</b><br>
+        KHOA CÔNG NGHỆ THÔNG TIN<br>
+        <h3>CỘNG HOÀ XÃ HỘI CHỦ NGHĨA VIỆT NAM</h3>
+        <h5>Dộc lập - Tự do - Hạnh Phúc</h5>
+    </p>
+    <br>
+    <div>
+        <h1>ĐĂNG KÍ XÉT TUYỂN</h1>
+    </div>
+    <br>
+    <div id="h4">
+        <form action="baitap2_4.html" method="post">
+            <label for="name">Họ tên:</label>
+            <input type="text" id="name">
+            <br><br>
+            <label>Giới tính:</label>
+            <input type="radio" id="male" value="1" name="sex">
+            <label for="male">Nam</label>
+            <input type="radio" id="female" value="0" name="sex">
+            <label for="female">Nữ</label>
+            <br><br>
+            <label>Ngành thi:</label>
+            <br>
+            <input type="radio" id="it" value="0" name="type">
+            <label for="it">Công nghệ thông tin</label><br>
+            <input type="radio" id="preschool" value="1" name="type">
+            <label for="preschool">Mầm non</label><br>
+            <input type="radio" id="music" value="-1" name="type">
+            <label for="music">Âm nhạc</label><br>
+            <br>
+            <input type="button" value="Đồng ý" name="chose">
+            <input type="button" value="Không đồng ý" name="chose">
+        </form>
+    </div>
+</body>
+</html>

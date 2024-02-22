@@ -4,11 +4,84 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ex03</title>
+    <style>
+        hr {
+            box-sizing: border-box;
+        }
+        h1, h4, h3, h5 {
+            text-align: center;
+        }
+        h1 {
+            font-family: Verdana;
+            font-weight: bold;
+            color: red;
+        }
+        #h4 {
+            font-size: 15px;
+            font-family: Arial;
+        }
+        ol {
+            padding-left: 20px;
+        }
+        ol > li {
+            font-weight: bold; /* In đậm số thứ tự */
+        }
+        ul>li{font-weight: normal;}
+        .image-container {
+            display: flex;
+            justify-content: space-between; /* Cách đều các phần tử */
+        }
+        .image-container img {
+        
+            height: 250px;
+            flex: 1; /* Đảm bảo các ảnh có cùng kích thước */
+            margin: 0 10px; /* Khoảng cách giữa các ảnh */
+        }
+    </style>
 </head>
 <body>
-    <h3 align="left"><b>TRƯỜNG ĐẠI HỌC BẠC LIÊU</b><br>
-                       KHOA CÔNG NGHỆ THÔNG TIN</h3>
-    <h3 align="right"><b>CỘNG HOÀ XÃ HỘI CHỦ NGHĨA VIỆT NAM</b></h3><br>
-    <h5>Độc lập - Tự do - Hạnh phúc</h5>
+    <br>
+    <p>
+        <b>TRƯỜNG ĐẠI HỌC BẠC LIÊU</b><br>
+        KHOA CÔNG NGHỆ THÔNG TIN<br>
+        <h3>CỘNG HOÀ XÃ HỘI CHỦ NGHĨA VIỆT NAM</h3>
+        <h5>Dộc lập - Tự do - Hạnh Phúc</h5>
+    </p>
+
+    <p id="h4">
+        <h1>THÔNG BÁO TUYỂN SINH</h1>
+        <h4>(Hệ đại học không chính qui)</h4>
+    </p>
+
+    <div id="h4">
+        <ol>
+            <li><b>Tài chính tín dụng</b></li>
+            <li><b>Quản lí đất đai</b></li>
+            <li><b>Công nghệ thực phẩm</b></li>
+            <li><b>Văn hoá du lịch</b>
+                <ul type="disc">
+                    <li>Môn thi: văn sử địa</li>
+                    <li>Ngày thi: 19/12/2008</li>
+                    <li>Ôn tập văn hoá: 13/11/2008</li>
+                </ul>
+            </li>
+            <li><b>Công tác xã hội</b></li>
+            <li><b>Báo chí</b>
+                <ul type="disc">
+                    <li>Môn thi: văn sử địa</li>
+                    <li>Ngày thi: 20/12/2008</li>
+                    <li>Ôn tập văn hoá: 14/11/2008</li>
+                </ul>
+            </li>
+        </ol>
+    </div>
+
+    <hr color="black" size="3">
+
+    <div class="image-container">
+        <img src="dh-bac-lieu.jpg" alt="Image 1">
+        <img src="dai-hoc-bac-lieu.webp" alt="Image 2">
+        <img src="logo-dai-hoc-bac-lieu-dongphucsongphu-1.png" alt="Image 3">
+    </div>
 </body>
 </html>
