@@ -3,61 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https//cnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="css/3_8_01.css">
     <title>3_8</title>
-    <style>
-        * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Main navigation styles */
-nav ul {
-    list-style-type: none;
-}
-
-nav ul li {
-    display: inline-block;
-    position: relative;
-}
-
-nav ul li a {
-    display: block;
-    padding: 10px;
-    text-decoration: none;
-    color: #333;
-}
-
-/* Submenu styles */
-nav ul  ul {
-    display: none;
-    position: absolute;
-    left:0;
-    top: 100%;
-    background-color: #f9f9f9;
-    z-index: 1; /* Đảm bảo menu con hiển thị trên menu cha */
-}
-
-nav ul  ul li {
-    display: block;
-}
-
-nav ul li:hover > ul {
-    display: block;
-}
-
-    </style>
 </head>
 <body>
-    <div class="container">
-        <nav class="menu">
-         <ul>
+    <div id="header">
+        <nav class="container">
+         <ul id="main-menu">
             <li><a href="">Trang chủ</a></li>
             <li><a href="">Giới thiệu</a></li>
             <li><a href="">Khoá học</a>
-                <ul>
+                <ul class="sup-menu">
                     <li><a href="">Tin học căn bản </a>
-                        <ul>
+                        <ul class="sup-menu">
                             <li><a href="">Microsoft Word 2010</a></li>
                             <li><a href="">Microsoft Excel 2010</a></li>
                             <li><a href="">Microsoft Powerpoint 2010</a></li>
@@ -76,7 +35,14 @@ nav ul li:hover > ul {
             
          </ul>
         </nav>
-        <div class="body"></div>
+        
     </div>
+    <script src="https//code.jiquery.com/jiquery-3.6.0.js"></script>
+    <script>
+        $(docoment).ready(function{
+            // tất cả các li có sup-mennu và thêm vào nó class has-child
+            $('.sup-menu').parent('li').addClass('has-child')
+        });
+    </script>
 </body>
 </html>
