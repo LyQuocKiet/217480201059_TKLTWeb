@@ -40,6 +40,9 @@ nav{
     padding: 20px 70px;
     text-decoration: none;
 }
+#main-menu >li:hover {
+    color: orange;/*sua*/
+}
 #main-menu ul.sup-menu{
     display: none;
     position: absolute;
@@ -52,6 +55,7 @@ nav{
 }
 #main-menu li:hover > ul.sup-menu{
     display: block;
+    
 }
 #main-menu ul.sup-menu a{
     padding: 10px 20px;
@@ -60,9 +64,11 @@ nav{
 }
 #main-menu ul.sup-menu li:hover a{
     border-bottom: 1px solid rgb(255, 27, 27);
+    color: orange;   /*sửa*/
 }
 #main-menu ul.sup-menu li:last-child a{
     border: none;
+    
 }
 #main-menu ul.sup-menu ul.sup-menu{
     left: 300px;
@@ -83,9 +89,12 @@ nav{
     left: 0px;
     transition: 0.25s cubic-bezier(0.075, 0.82, 0.165, 1);
     
+    
+    
 
 }
 #main-menu>li:hover>a::before{
     /* display: block; */
     width: 100%;
+    
 }
