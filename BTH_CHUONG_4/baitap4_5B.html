@@ -8,37 +8,65 @@
 <body>
     <form action="">
         <ul>
-            <li>Ngày: <input type="text" id="date" value=""
-                onclick="getdate()"></li>
-            <li>Ngày trong tuần: <input type="text" id="day" value=""
-                onclick="getday()" ></li>
-            <li>Năm đầy đủ: <input type="text" id="fullyear" value=""
-                onclick="getfullyear()" ></li>
-            <li>Năm 2 số cuối: <input type="text" id="year" value=""
-                onclick="getYear()" ></li>
-            <li>Ngày trong tuần: <input type="text" id="day" value=""
-                onclick="getday()" ></li>
-            <li>Ngày trong tuần: <input type="text" id="day" value=""
-                onclick="getday()" ></li>
-            <li>Ngày trong tuần: <input type="text" id="day" value=""
-                onclick="getday()" ></li>
-            <li>Ngày trong tuần: <input type="text" id="day" value=""
-                onclick="getday()" ></li>
-            <li>Ngày trong tuần: <input type="text" id="day" value=""
-                onclick="getday()" ></li>
-            <li>Ngày trong tuần: <input type="text" id="day" value=""
-                onclick="getday()" ></li>
+            <li>Ngày: <input type="text" id="date" value="" onclick="getdate()"></li>
+            <li>Ngày trong tuần: <input type="text" id="dayOfWeek" value="" onclick="getday()"></li>
+            <li>Năm đầy đủ: <input type="text" id="fullyear" value="" onclick="getfullyear()"></li>
+            <li>Năm 2 số cuối: <input type="text" id="lastTwoDigitsOfYear" value="" onclick="getyear()"></li>
+            <li>Số giờ: <input type="text" id="hours" value="" onclick="gethours()"></li>
+            <li>Số mili giây: <input type="text" id="miliseconds" value="" onclick="getmiliseconds()"></li>
+            <li>Số phút: <input type="text" id="minutes" value="" onclick="getminutes()"></li>
+            <li>Số tháng: <input type="text" id="month" value="" onclick="getmonth()"></li>
+            <li>Số giây: <input type="text" id="seconds" value="" onclick="getseconds()"></li>
+            <li>Thời gian dạng miliseconds: <input type="text" id="time" value="" onclick="gettime()"></li>
+            
         </ul>
-        
-        
     </form>
     <script language="Javascript">
+        //tạo biến toàn cục d
         var d = new Date();
         function getdate(){
-            date.value =d.getDate();
+            document.getElementById('date').value = d.getDate();
         }
+        
         function getday(){
-            day.value= d.getDay();
+            // Lấy ngày trong tuần
+            var dayOfWeek = d.getDay();
+
+            // Mảng chứa tên các ngày trong tuần
+            var days = ["Chủ Nhật", "Thứ Hai", "Thứ Ba", "Thứ Tư", "Thứ Năm", "Thứ Sáu", "Thứ Bảy"];
+            document.getElementById('dayOfWeek').value = days[dayOfWeek];
+        }
+        
+        function getfullyear(){
+            document.getElementById('fullyear').value = d.getFullYear();
+        }
+        
+        function getyear(){
+            // Lấy năm hiện tại
+            var year = d.getFullYear();
+
+            // Lấy hai số cuối của năm
+            var lastTwoDigitsOfYear = year % 100;
+            document.getElementById('lastTwoDigitsOfYear').value = lastTwoDigitsOfYear;
+        }
+        function gethours(){
+            document.getElementById('hours').value = d.getHours();
+        }
+        console.log();
+        function getmiliseconds(){
+           document.getElementById('miliseconds').value = d.getMilliseconds();
+        }
+        function getminutes(){
+            document.getElementById('minutes').value = d.getMinutes();
+        }
+        function getmonth(){
+            document.getElementById('month').value = d.getMonth()+1;
+        }
+        function getseconds(){
+            document.getElementById('seconds').value = d.getSeconds();
+        }
+        function gettime(){
+            document.getElementById('time').value = d.getTime();
         }
     </script>
 </body>
